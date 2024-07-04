@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Brush Script MT', cursive;
+            color: #764C24;
+            text-transform: lowercase;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Function to format the date in "Month Day, Year" format
+        function formatDate(date) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return date.toLocaleDateString(undefined, options);
+        }
+
+        // Get today's date
+        const today = new Date();
+
+        // Format the date
+        const formattedDate = formatDate(today);
+
+        // Display the formatted date
+        document.write(formattedDate);
+    </script>
+</body>
+</html>
