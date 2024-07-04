@@ -6,6 +6,9 @@
             font-family: 'Brush Script MT', cursive;
             color: #764C24;
             text-transform: lowercase;
+            font-size: 72px; /* Increased font size for heading */
+            text-align: center;
+            margin-top: 20%;
         }
     </style>
 </head>
@@ -17,14 +20,29 @@
             return date.toLocaleDateString(undefined, options);
         }
 
+        // Function to get the appropriate greeting based on the current time
+        function getGreeting() {
+            const hour = new Date().getHours();
+            if (hour < 12) {
+                return 'good morning';
+            } else if (hour < 18) {
+                return 'good afternoon';
+            } else {
+                return 'good evening';
+            }
+        }
+
         // Get today's date
         const today = new Date();
 
         // Format the date
         const formattedDate = formatDate(today);
 
-        // Display the formatted date
-        document.write(formattedDate);
+        // Get the appropriate greeting
+        const greeting = getGreeting();
+
+        // Display the greeting and the formatted date
+        document.write(`${greeting}<br><span style="font-size: 48px;">${formattedDate}</span>`);
     </script>
 </body>
 </html>
