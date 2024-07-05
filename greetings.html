@@ -18,15 +18,20 @@
             text-transform: lowercase;
             font-size: 72px; /* Font size for the greeting */
             text-align: left;
-            line-height: 1.2; /* Adjust line height for spacing */
             padding: 10px; /* Padding to avoid clipping */
         }
         .date {
             font-family: 'Courier New', Courier, monospace; /* Change font to typewriter style */
-            font-size: 40px; /* Smaller font size for the date */
+            font-size: 20px; /* Smaller font size for the date */
+            margin: 0; /* Remove margin */
+            line-height: 1; /* Adjust line height for closer spacing */
         }
         .container {
             display: inline-block; /* Wrap content tightly */
+            line-height: 1; /* Adjust line height for closer spacing */
+        }
+        .greeting {
+            margin-bottom: -0.5px; /* Adjust margin to reduce space between lines */
         }
     </style>
 </head>
@@ -60,7 +65,7 @@
         const greeting = getGreeting();
 
         // Display the greeting and the formatted date
-        document.write(`<div class="container">${greeting}<br><span class="date">${formattedDate}</span></div>`);
+        document.write(`<div class="container"><div class="greeting">${greeting}</div><div class="date">${formattedDate}</div></div>`);
     </script>
 </body>
 </html>
