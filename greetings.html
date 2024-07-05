@@ -31,7 +31,7 @@
         // Function to format the date in "Day of the week, Month Day, Year" format
         function formatDate(date) {
             const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            return date.toLocaleDateString(undefined, options);
+            return `today is ${date.toLocaleDateString(undefined, options)}`;
         }
 
         // Function to get the appropriate greeting based on the current time
