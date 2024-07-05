@@ -6,10 +6,11 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            justify-content: flex-start;
+            align-items: flex-start;
             background: transparent; /* Ensures background is transparent */
+            height: 100%;
+            width: 100%;
         }
         body {
             font-family: 'Brush Script MT', cursive;
@@ -17,13 +18,15 @@
             text-transform: lowercase;
             font-size: 72px; /* Font size for the greeting */
             text-align: left;
-            display: inline-block; /* Wrap content tightly */
             line-height: 1.2; /* Adjust line height for spacing */
             padding: 10px; /* Padding to avoid clipping */
         }
         .date {
             font-family: 'Courier New', Courier, monospace; /* Change font to typewriter style */
             font-size: 40px; /* Smaller font size for the date */
+        }
+        .container {
+            display: inline-block; /* Wrap content tightly */
         }
     </style>
 </head>
@@ -57,7 +60,7 @@
         const greeting = getGreeting();
 
         // Display the greeting and the formatted date
-        document.write(`${greeting}<br><span class="date">${formattedDate}</span>`);
+        document.write(`<div class="container">${greeting}<br><span class="date">${formattedDate}</span></div>`);
     </script>
 </body>
 </html>
