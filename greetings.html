@@ -21,15 +21,16 @@
             text-align: left;
         }
         .date {
+            font-family: sans-serif; /* Change font to sans-serif */
             font-size: 48px; /* Font size for the date */
         }
     </style>
 </head>
 <body>
     <script>
-        // Function to format the date in "Month Day, Year" format
+        // Function to format the date in "Day of the week, Month Day, Year" format
         function formatDate(date) {
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
             return date.toLocaleDateString(undefined, options);
         }
 
